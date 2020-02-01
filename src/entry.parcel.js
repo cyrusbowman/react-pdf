@@ -1,9 +1,10 @@
-import pdfjs from 'pdfjs-dist';
 import Document from './Document';
 import Outline from './Outline';
 import Page from './Page';
 
 import { isLocalFileSystem, warnOnDev } from './shared/utils';
+
+let pdfjs = window.pdfjsLib;
 
 if (isLocalFileSystem) {
   // eslint-disable-next-line no-console

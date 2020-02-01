@@ -6,7 +6,6 @@ import PropTypes from 'prop-types';
 import makeEventProps from 'make-event-props';
 import makeCancellable from 'make-cancellable-promise';
 import mergeClassNames from 'merge-class-names';
-import pdfjs, { PDFDataRangeTransport } from 'pdfjs-dist';
 
 import DocumentContext from './DocumentContext';
 
@@ -14,6 +13,9 @@ import Message from './Message';
 
 import LinkService from './LinkService';
 import PasswordResponses from './PasswordResponses';
+
+let pdfjs = window.pdfjsLib
+let PDFDataRangeTransport = pdfjs.PDFDataRangeTransport;
 
 import {
   callIfDefined,

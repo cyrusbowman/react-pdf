@@ -1,6 +1,5 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import pdfjs from 'pdfjs-dist';
 import makeCancellable from 'make-cancellable-promise';
 
 import DocumentContext from '../DocumentContext';
@@ -13,6 +12,7 @@ import {
 } from '../shared/utils';
 
 import { isLinkService, isPage, isRotate } from '../shared/propTypes';
+let pdfjs = window.pdfjsLib;
 
 export class AnnotationLayerInternal extends PureComponent {
   state = {

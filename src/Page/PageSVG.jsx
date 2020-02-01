@@ -1,6 +1,5 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import pdfjs from 'pdfjs-dist';
 
 import PageContext from '../PageContext';
 
@@ -12,6 +11,7 @@ import {
 } from '../shared/utils';
 
 import { isPage, isRotate } from '../shared/propTypes';
+let pdfjs = window.pdfjsLib;
 
 export class PageSVGInternal extends PureComponent {
   state = {
