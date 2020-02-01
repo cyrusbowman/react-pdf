@@ -2,7 +2,7 @@
 .cache
 .idea
 .vscode
-dist
+# dist
 coverage
 node_modules
 test_pdfs
